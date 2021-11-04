@@ -1,0 +1,20 @@
+
+
+<div class="resizable container">
+<div #box class="crop" 
+[style.width.px]="width" 
+[style.height.px]="height" 
+[style.transform]="'translate3d('+ left + 'px,' + top + 'px,' + '0px)'"
+  >
+   
+    <app-blockly #child>    
+    </app-blockly>
+    <div class="crop-line crop-top-line" (mousedown)="setStatus(1)" (mouseup)="setStatus(0)"></div>
+    <div class="crop-line crop-right-line" (mousedown)="setStatus(4)"(mouseup)="setStatus(0)"></div>
+    <div class="crop-line crop-bottom-line" (mousedown)="setStatus(2)"(mouseup)="setStatus(0)"></div>
+    <div class="crop-line crop-left-line" (mousedown)="setStatus(3)"(mouseup)="setStatus(0)"></div> 
+   </div>
+</div>
+
+
+  

@@ -1,0 +1,96 @@
+#resizable {
+    background: blueviolet;
+}
+
+.container {
+position: relative;
+}
+.crop {
+
+top: 10px;
+left: 100px;
+width: 100px;
+height: 100px;
+border: 1px solid black;
+}
+
+.crop .crop-line {
+position: absolute;
+}
+.crop:hover .crop-line {
+border-color: rgba(123,53,132,1);
+}
+
+.crop-top-line:hover {
+border-top: 3px solid rgba(204,31,48,1); 
+}
+.crop-bottom-line:hover {
+border-bottom: 3px solid rgba(204,31,48,1);
+}
+.crop-left-line:hover {
+border-left: 3px solid rgba(204,31,48,1);
+}
+.crop-right-line:hover {
+border-right: 3px solid rgba(204,31,48,1);
+}
+
+.crop .crop-top-line {
+top: 0;
+left: 0;
+right: 0;
+height: 5px; /* 5px for the mouse cursor update size */
+cursor: n-resize;
+}
+.crop .crop-bottom-line {
+bottom: 0;
+left: 0;
+right: 0;
+height: 5px; /* 5px for the mouse cursor update size */
+cursor: s-resize;
+}
+.crop .crop-left-line {
+top: 0;
+left: 0;
+bottom: 0;
+width: 5px; /* 5px for the mouse cursor update size */
+cursor: w-resize;
+}
+.crop .crop-right-line {
+top: 0;
+right: 0;
+bottom: 0;
+width: 5px; /* 5px for the mouse cursor update size */
+
+cursor: e-resize;
+}
+.crop .crop-corner {
+position: absolute;
+width: 6px;
+height: 6px;
+border-radius: 2px;
+background: #FFF;
+opacity: 0;
+}
+.crop .crop-top-left-corner {
+top: -3px;
+left: -3px;
+cursor: nw-resize;
+}
+.crop .crop-top-right-corner {
+top: -3px;
+right: -3px;
+cursor: ne-resize;
+}
+.crop .crop-bottom-left-corner {
+bottom: -3px;
+left: -3px;
+cursor: sw-resize;
+}
+.crop .crop-bottom-right-corner {
+bottom: -3px;
+right: -3px;
+cursor: se-resize;
+}
+.crop:hover .crop-corner {
+opacity: 1;
+}

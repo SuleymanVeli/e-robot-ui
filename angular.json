@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "9db554f6-c135-4041-ad43-2e87d4c0696c"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -30,7 +33,11 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["node_modules/blockly/blockly_compressed.js",
+              "node_modules/blockly/blocks_compressed.js",    
+              "node_modules/blockly/javascript_compressed.js",
+              "node_modules/blockly/msg/en.js",              
+              "src/assets/blockly/custom_blocks.js"]
           },
           "configurations": {
             "production": {
